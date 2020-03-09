@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "quotes",
+  "info": {
+    "name": "Quote"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "quote": {
+      "type": "string"
+    },
+    "Tempo": {
+      "type": "enumeration",
+      "enum": [
+        "segundos",
+        "minutos",
+        "horas",
+        "dias"
+      ]
+    },
+    "quote_img": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
